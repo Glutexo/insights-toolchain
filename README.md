@@ -1,6 +1,6 @@
 # Insights Toolchain #
 
-## How it works ##
+## How it works ##
 
 ```shell
 $ sudo ruby -I lib bin/insights-client-collect
