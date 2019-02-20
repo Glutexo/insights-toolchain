@@ -3,5 +3,4 @@
 require('insights_toolchain')
 
 client = InsightsToolchain::Client.new
-out = client.collect
-puts(out)
+client.collect

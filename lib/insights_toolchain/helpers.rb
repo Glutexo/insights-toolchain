@@ -1,10 +1,12 @@
+require('open3')
+
 module InsightsToolchain
   class Process
     class << self
       def run(args)
         out = ''
-        IO.popen(args) do |io|
-          out << io.read
+        Open3.popen3(*args) do |stdin, stdout, stderr, wait_thr|
+          out << stderr.read
         end
         out
       end
